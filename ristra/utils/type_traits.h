@@ -110,6 +110,9 @@ struct is_ostream_writeable<T,
   : std::true_type {
 };
 
+template <typename T>
+constexpr bool is_ostream_writeable_v = is_ostream_writeable<T>();
+
 ////////////////////////////////////////////////////////////////////////////////
 /// \brief A Helper to identify if this is a container
 //! \remark If T is, this version is instantiated.
